@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>login</title>
+<style>
+body{
+background-color:#76448A;
+}
+label{
+text-align:left;
+background-color:#F2F3F4;
+font-size:25px;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+#login{
+background-color:#EBDEF0;
+padding:5rem;
+margin:3rem;
+border:solid;
+}
+</style>
+</head>
+<body>
+<div id="login">
+<h1> Login </h1>
+<label for="username"><b>User name</b></label>
+<input type="text" id="username" placeholder="username" name="username" required  ><br>
+<span id="name"></span>
+<label for="psw"><b>Password</b></label>
+<input type="password" id="password" name="psw"placeholder="password" required><br>
+<span id="password"></span>
+<button onClick="submits()"> login</button>
+</div>
+<script>
+function submits()
+{
+var x = document.getElementById("username").value;
+var y = document.getElementById("password").value;
+console.log(x);                                        
+if(x == "" || y == "")
+{
+document.getElementById('login').innerHTML = 'Invalid submission';
+}
+else
+{
+document.getElementById('login').innerHTML = 'Hi.. welcome, you are sucessfully logged in !';
+}
+}
+</script>
+</body>
+</HTML>
